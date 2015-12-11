@@ -13,7 +13,6 @@ see import.sql
 
 ## APIs:
 PUT /transactionservice/transaction/$transaction_id
-example:
 > curl http://localhost:8080/transactionservice/transaction/10 -H "Content-Type: application/json" -X POST -d '{"amount":5000,"type":"cars"}'
 > => {"status":"ok"}
 >
@@ -21,17 +20,14 @@ example:
 > => {"status":"ok"}
 
 GET /transactionservice/transaction/$transaction_id
-example:
 > curl http://localhost:8080/transactionservice/transaction/11
 > => {"id":11,"amount":10000.0,"type":"shopping","parent_id":10}
 
 GET /transactionservice/types/$type
-example:
 > curl http://localhost:8080/transactionservice/types/cars
 > => [10]
 
 GET /transactionservice/sum/$transaction_id
-example:
 > curl http://localhost:8080/transactionservice/sum/10
 > => {"sum":15000}
 >
