@@ -13,10 +13,10 @@ see import.sql
 
 ## APIs:
 PUT /transactionservice/transaction/$transaction_id
-> curl http://localhost:8080/transactionservice/transaction/10 -H "Content-Type: application/json" -X POST -d '{"amount":5000,"type":"cars"}'
+> curl http://localhost:8080/transactionservice/transaction/10 -H "Content-Type: application/json" -X PUT -d '{"amount":5000,"type":"cars"}'
 > => {"status":"ok"}
 >
-> curl http://localhost:8080/transactionservice/transaction/11 -H "Content-Type: application/json" -X POST -d '{"amount":10000,"type":"shopping","parent_id":10}'
+> curl http://localhost:8080/transactionservice/transaction/11 -H "Content-Type: application/json" -X PUT -d '{"amount":10000,"type":"shopping","parent_id":10}'
 > => {"status":"ok"}
 
 GET /transactionservice/transaction/$transaction_id
